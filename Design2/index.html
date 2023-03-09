@@ -5,8 +5,156 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            --color-fondo:#91b0b8;
+            --color-fondo-card: #ffffff;
+            --color-texto-resaltado: #bce2ea;
+            --color-fondo-boton1: #f1f1f1;
+            --color-fondo-boton2: #fabe51;
+            --color-boton1: #b8e0e9;
+            --color-boton2: #081d29;
+        }
+        body {
+            background-color: var(--color-fondo);
+            font-family: 'Roboto', sans-serif;
+            margin: 30px 15px 30px 15px;
+        }
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+        }
+        .card1 {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            background-color: var(--color-fondo-card);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card2 {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+        .card3 {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        .card4 {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            background-color: var(--color-fondo-card);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card5 {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            background-color: var(--color-fondo-card);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card6 {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+        .card2 img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card3 img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card6 img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .card1-text {
+            display:flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .card1-text p {
+            font-size: 14px;
+        }
+        .card1-logos {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+        }
+        .card1-logos img {
+            width: 60%;
+        }
+    </style>
 </head>
 <body>
-    
+    <main>
+        <section class="card1">
+            <p>Rivet Brand Guidelines</p>
+            <div class="card1-text">
+                <h1>Rivet creates stronger workplace cultures through connected teams.</h1>
+                <p>The monochrome logos can be placed on black or withe backgrounds. Always make sure that both elementos of the logo mark and logotype are correctly positioned.</p>
+            </div>
+            <div class="card1-logos">
+                <div>
+                    <img src="./images/logo2.png" alt="Logo2">
+                </div>
+                <div>
+                    <img src="./images/logo.png" alt="Logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="card2">
+            <img src="./images/card2.jpg" alt="Card2">
+        </section>
+
+        <section class="card3">
+            <img src="./images/card3.jpg" alt="Card3">
+        </section>
+
+        <section class="card4">
+            <p>Rivet Brand Guidelines</p>
+            <div>
+                <h1>Monochrome Logo</h1>
+                <p>The monochrome logos can be placed on black or withe backgrounds. Always make sure that both elementos of the logo mark and logotype are correctly positioned.</p>
+            </div>
+            <div>
+                <img src="./images/logo.png" alt="Logo1">
+                <div>
+                    <img src="./images/logo.png" alt="Logo1">
+                </div>
+            </div>
+        </section>
+
+        <section class="card5">
+            <p>Rivet Brand Guidelines</p>
+            <div>
+                <h1>One-color logo</h1>
+                <p>The one-color logo should be used only on photos and some color background whith the Rivet color palette.</p>
+            </div>
+            <div>
+                <img src="./images/logo.png" alt="Logo">
+                <div>
+                    <img src="./images/logo.png" alt="Logo">
+                </div> 
+            </div>
+            <div>
+                <img src="./images/logo.png" alt="Logo">
+                <div>
+                    <img src="./images/logo.png" alt="Logo">
+                </div> 
+            </div>
+        </section>
+
+        <section class="card6">
+            <img src="./images/card6.jpg" alt="Card6">
+        </section>
+    </main>
 </body>
 </html>

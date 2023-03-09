@@ -10,7 +10,7 @@
   <body class="m-10">
     <header class="flex justify-between">
         <nav>
-            <ul class="flex gap-10 text-md text-texto-menu">
+            <ul class="flex gap-10 text-md font-medium text-texto-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Guest</a></li>
                 <li><a href="#">Podcast</a></li>
@@ -18,26 +18,33 @@
         </nav>
         <h1 class="text-3xl font-bold">CHAINCAST</h1>
         <nav>
-            <ul class="flex gap-10 text-md">
+            <ul class="flex gap-10 text-md font-medium text-texto-menu">
                 <li><a href="#">Events</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <hr />
-    <main>
-        <section class="card1">
-            <img src="./images/card1.jpg" alt="card1">
+    <hr class="border border-l mt-8 mb-14" />
+    <main class="grid grid-cols-[2fr_1fr_1fr] gap-5">
+        <!-- Card1 -->
+        <section class="row-span-3 mr-5">
+            <img class="rounded-2xl w-full" src="./images/card1.jpg" alt="card1">
         </section>
-        <section class="card2">
-            <img src="./images/card2.jpg" alt="card2">
+        
+        <!-- Card2 -->
+        <section class="col-start-2 col-end-3">
+            <img class="rounded-2xl" src="./images/card2.jpg" alt="card2">
         </section>
-        <section class="card3">
-            <img src="./images/card3.jpg" alt="card3">
+        
+        <!-- card3 -->
+        <section class="col-start-3 col-end-4">
+            <img class="rounded-2xl" src="./images/card3.jpg" alt="card3">
         </section>
-        <section class="texto">
-            <div class="texto-imagen">
+
+        <!-- Texto -->
+        <section class="col-start-2 col-end-4 row-start-2 row-end-3 text-5xl">
+            <div class="flex items-center">
                 <p>Tell us who</p>
                 <div>
                     <img src="./images/IconPodcast.png" alt="img1">
@@ -45,16 +52,20 @@
             </div>
             <p>you'd like to meet next</p>
         </section>
-        <section class="boton">
-            <div class="fondo-boton">
-                <button class="btn1">SUGGEST THE NEXT GUEST ON THE PODCAST</button>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+
+        <!-- Botón -->
+        <section class="col-start-2 col-end-4 row-start-3 row-end-4">
+            <div class="flex bg-texto-boton rounded-lg items-center">
+                <button class="w-10/12 bg-fondo-boton rounded-lg text-md text-texto-boton p-5">SUGGEST THE NEXT GUEST ON THE PODCAST</button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="ml-6 w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
             </div>
         </section>
     </main>
-    <footer>
+    
+    <!-- Footer -->
+    <footer class="flex justify-center items-center text-6xl mt-10">
         <p>TURN ON</p>
         <div>
             <img src="./images/IconFooter.png" alt="img2">
