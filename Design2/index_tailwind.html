@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño2 - TailwindCSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    fondo:'#91b0b8',
+                    fondo_card: '#ffffff',
+                    texto_resaltado: '#bce2ea',
+                    fondo_boton1: '#f1f1f1',
+                    fondo_boton2: '#fabe51',
+                    boton1: '#b8e0e9',
+                    boton2: '#081d29',
+                }
+            }
+        }
+    }
+    </script>
+</head>
+<body class="bg-fondo my-8 mx-5">
+    <main class="grid grid-cols-1 sm:grid-cols-3 grid-rows-auto gap-5">
+        <!-- Card1 -->
+        <section class="sm:row-span-2 sm:col-span-2 bg-fondo_card rounded-lg p-6">
+            <p class="bg-texto_resaltado w-fit rounded-full mb-2 py-1 px-4 text-[8px] font-bold">Rivet Brand Guidelines</p>
+            <div class="flex gap-12">
+                <h1 class="w-1/2 font-semibold text-2xl">Rivet creates stronger workplace cultures through connected teams.</h1>
+                <p class="w-1/2 text-xs">The monochrome logos can be placed on black or withe backgrounds. Always make sure that both elementos of the logo mark and logotype are correctly positioned.</p>
+            </div>
+            <div class="flex justify-around items-center mt-16">
+                <div >
+                    <img class="w-4/5" src="./images/logo2.png" alt="Logo2">
+                </div>
+                <div>
+                    <img class="w-4/5" src="./images/logo.png" alt="Logo">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Card2 -->
+        <section >
+            <img class="w-full h-full rounded-lg" src="./images/card2.jpg" alt="Card2">
+        </section>
+        
+        <!-- Card3 -->
+        <section class="flex bg-fondo_card rounded-lg">
+            <!-- <img src="./images/card3.jpg" alt="Card3"> -->
+            <div class="w-1/3">
+                <p class="bg-texto_resaltado w-fit rounded-full py-1 px-4 text-[8px] font-bold mt-4 ml-4 mb-2">Rivet Brand Guidelines</p>
+                <h4 class="text-md lg:text-xl font-bold ml-4 leading-5">Working remote doesn't have to feel so lonely</h4>
+                <img class="w-16 ml-4 mt-12 mb-4" src="./images/logo.png" alt="Logo">
+            </div>
+            <div class="relative grow">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 2 22 20" stroke-width="4" stroke="currentColor" class="w-full stroke-boton1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v15" />
+                </svg>
+                <div class="w-12 pb-12 rounded-full absolute top-[3%] right-[2%] bg-fondo_boton2"></div>
+            </div>
+              
+        </section>
+
+        <!-- Card4 -->
+        <section class="flex flex-col bg-fondo_card rounded-lg overflow-hidden min-h-[250px]">
+            <p class="bg-texto_resaltado w-fit rounded-full py-1 px-4 text-[8px] font-bold mt-4 ml-4">Rivet Brand Guidelines</p>
+            <div class="flex justify-between mt-2 mr-5 mb-8 ml-4">
+                <h4 class="font-bold">One-color logo</h4>
+                <p class="w-1/2 text-[10px]">The one-color logo should be used only on photos and some color background whith the Rivet color palette.</p>
+            </div>
+            <div class="flex grow-[2]">
+                <div class="flex justify-center items-center">
+                    <img class="w-1/3" src="./images/logo.png" alt="Logo1">
+                </div>
+                <div class="flex justify-center items-center bg-boton2 rounded-l-full w-[110%]">
+                    <img class="w-1/3" src="./images/logo3.png" alt="Logo1">
+                </div>
+            </div>
+        </section>
+
+        <!-- Card5 -->
+        <section class="flex flex-col bg-fondo_card rounded-lg overflow-hidden min-h-[250px]">
+            <p class="bg-texto_resaltado w-fit rounded-full py-1 px-4 text-[8px] font-bold mt-4 ml-4">Rivet Brand Guidelines</p>
+            <div class="flex justify-between mt-2 mr-5 mb-8 ml-4">
+                <h4 class="font-bold">Two-color logo</h4>
+                <p class="w-1/2 text-[10px]">The one-color logo should be used only on photos and some color background whith the Rivet color palette.</p>
+            </div>
+            <div class="flex flex-col justify-end grow-[2]">
+                <div class="flex flex-auto bg-fondo_boton1">
+                    <div class="flex justify-center items-center">
+                        <img class="w-1/3" src="./images/logo.png" alt="Logo">
+                    </div>
+                    <button class="w-full bg-boton1 rounded-l-full flex justify-center items-center hover:bg-fondo_boton2">
+                        <img class="w-1/3" src="./images/logo.png" alt="Logo">
+                    </button>
+                </div>
+                <div class="flex flex-auto bg-fondo_boton2">
+                    <div class="flex justify-center items-center">
+                        <img class="w-1/3" src="./images/logo.png" alt="Logo">
+                    </div>
+                    <button class="w-full bg-boton2 rounded-l-full flex justify-center items-center hover:bg-fondo_boton1">
+                        <img class="w-1/3" src="./images/logo4.png" alt="Logo">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card6 -->
+        <section>
+            <img class="w-full h-full rounded-lg" src="./images/card6.jpg" alt="Card6">
+        </section>
+    </main>
+</body>
+</html>
