@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design1</title>
+    <style>
+        
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            --color-fondo: #EFE7E3;
+            --color-texto-menu: #1B2126;
+            --color-texto-boton: #FFFFFF;
+            --fondo-boton: #000000;
+            --fondo-section4: #DFD0AE;
+        }
+
+        body  {
+            background-color: var(--color-fondo);
+            font-family: sans-serif;
+            margin: 40px;
+        }
+        
+        .header {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        main {
+            display:grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-auto-rows: auto;
+            grid-template-areas: "card1 card2 card3"
+                                 "card1 texto texto"
+                                 "card1 boton boton";
+            gap:20px
+        }
+        .card1 {
+            grid-area: card1;
+            margin-right: 30px;
+        }
+        .card2 {
+            grid-area: card2;
+        }
+        .card3 {
+            grid-area:card3;
+        }
+        .texto {
+            grid-area:texto;
+            font-weight: 600;
+            font-size: 40px;
+        }    
+        .boton {
+            grid-area:boton;
+        }
+        
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            font-size: 70px;
+            gap:20px
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--color-texto-menu);
+            padding: 5px;
+        }
+        .fondo-boton {
+            display:flex;
+            background-color: var(--fondo-section4);
+            border-radius: 20px;
+        }
+        .btn1 {
+            width: 85%;
+            background-color: var(--fondo-boton);
+            color: var(--fondo-section4);
+            border: none;
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        img {
+            width: 100%;
+            border-radius: 40px;
+        }
+        .img-footer {
+            display: flex;
+            align-items: center;
+
+        }
+        hr {
+            margin-top: 15px;
+            margin-bottom: 40px;
+        }
+        svg {
+            width:50px;
+            margin-left: 10px;
+        }
+        .podcast {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+            }
+            .menu {
+                gap:10px;
+            }
+            .menu1, .titulo-menu, .menu2 {
+                margin-bottom: 20px;
+            }
+            main {
+                grid-template-columns: 1fr;
+                grid-template-areas: "card1"
+                                     "card2"
+                                     "card3"
+                                     "texto"
+                                     "boton";
+            }
+            .card1 {
+                margin-right: 0;
+            }
+            footer {
+                flex-direction: column;
+                font-size: 40px;
+                gap:5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="menu1">
+            <ul class="menu">
+                <li><a href="#" >Home</a></li>
+                <li><a href="#">Guest</a></li>
+                <li><a href="#">Podcasts</a></li>
+            </ul>
+        </nav>
+        <h1 class="titulo-menu">CHAINCAST</h1>
+        <nav class="menu2">
+            <ul class="menu">
+                <li><a href="#">Events</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr/>
+    <main>
+        <section class="card1">
+            <img class="img-card" src="./images/card1.jpg" alt="Card1">
+        </section>
+        <section class="card2">
+            <img class="img-card2" src="./images/card2.jpg" alt="Card2">
+        </section>
+        <section class="card3">
+            <img class="img-card3" src="./images/card3.jpg" alt="Card1">
+        </section>
+        <section class="texto">
+            <div class="podcast">
+                <p>Tell us who</p>
+                <div>
+                    <img class="img-podcast" src="./images/IconPodcast.png"  alt="Podcast">
+                </div>
+            </div>
+            <p>you'd like to meet next</p>
+        </section>
+        <section class="boton">
+            <div class="fondo-boton">
+                <button class="btn1">SUGGEST THE NEXT GUEST ON THE PODCAST</button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>TURN ON</p>
+        <div class="img-footer">
+            <img src="./images/IconFooter.png" alt="IconFooter">
+        </div>
+        <p>CHAINCAST</p>
+    </footer>
+</body>
+</html>
